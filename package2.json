@@ -1,0 +1,16 @@
+
+{
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "build:usb": "cross-env VITE_BASE=./ vite build",
+    "build:gh": "cross-env VITE_BASE=/ga68-planner/ vite build",
+    "preview": "vite preview",
+    "deploy": "gh-pages -d dist"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.3",
+    "vite": "^6.0.5",
+    "@vitejs/plugin-react": "^4.2.0"
+  }
+}
