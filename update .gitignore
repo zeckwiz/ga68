@@ -1,0 +1,17 @@
+
+# Node / React / Angular
+node_modules/
+dist/
+build/
+
+# Python
+__pycache__/
+*.pyc
+.env
+
+# .NET
+bin/
+obj/
+
+# General
+.DS_Store
