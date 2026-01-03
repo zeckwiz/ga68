@@ -1,0 +1,30 @@
+
+
+# .github/workflows/build.yml
+name: CI
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+
+jobs:
+  build:
+    runs-on: windows-latest  # or ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "npm"             # or "yarn" if you use yarn
+          # If monorepo, consider cache-dependency-path (see below)
+
+      - name: Install deps
+        run: npm ci                # uses package-lock.json for clean install
+        # If using yarn:
+        # run: yarn install --frozen-lockfile
+
+      - name: Build
+        run: npm run build
