@@ -13,22 +13,26 @@ permissions:
   pages: write
   id-token: write
 
-# Avoid overlapping deployments
+# Prevent overlapping deployments
 concurrency:
   group: "pages"
   cancel-in-progress: true
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-latest   # recommended for Pages examples
     steps:
       - uses: actions/checkout@v4
+
       - uses: actions/setup-node@v4
         with:
-          node-version: '20'
-          cache: 'npm'
+          node-version: 20
+          cache: npm
+
       - run: npm ci
       - run: npm run build
+
+      # Upload the built site in ./dist as a Pages artifact
       - uses: actions/upload-pages-artifact@v3
         with:
           path: ./dist
