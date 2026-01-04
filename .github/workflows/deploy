@@ -4,7 +4,7 @@ name: Deploy Vite app to GitHub Pages
 
 on:
   push:
-    branches: [main]
+    branches: [gh-pages]
   workflow_dispatch:
 
 # Required permissions for Pages deployment
