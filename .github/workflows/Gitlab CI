@@ -1,0 +1,7 @@
+
+image: node:20
+
+build:
+  script:
+    - npm ci
+    - npm run build
