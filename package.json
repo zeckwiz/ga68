@@ -9,7 +9,8 @@
   "main": "electron/main.js",
   "repository": {
     "type": "git",
-    "url": "https:https://zeckwiz.github.io/ga68"
+    "url": "https://github.com/zeckwiz/ga68.git"
+     "homepage": "https://zeckwiz.github.io/ga68",
   },
   "engines": {
     "node": ">=18"
