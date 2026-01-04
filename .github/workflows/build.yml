@@ -2,7 +2,7 @@
 name: Deploy web
 on:
   push:
-    branches: [ main ]  # or your default branch
+    branches: [ gh-pages ]  # or your default branch
 permissions:
   contents: write
   pages: write
